@@ -1,0 +1,27 @@
+# --------  FICHIERS DOSSIERS IGNORES   ---------
+#-----------------------------------------------
+
+.env/
+README.ipynb
+
+#src/
+src/paris_anomalie_main/__pycache__
+src/static/.ipynb_checkpoints
+src/static/*.pdf
+src/static/coeur_wb.csv
+src/static/dansMaRue_src.csv
+src/static/_question2_jupyter_ParisAnomalieSignalees.ipynb
+src/static/*.py
+src/static/img/_old/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paris | Anomalies</title>
+    <link rel="stylesheet" href="{% static 'css/style_wb.css' %}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/img1.png"> {% comment %} image logo onglet {% endcomment %} 
+</head>
+<body>
+
+
+
+    <nav>
+        <a href="/"><img src="../static/img/img1.png" alt=""></a>  {% comment %} image logo accueil {% endcomment %} 
+        <p>{{ date|date:"d F Y - H\hi s \s" }}</p>
+        <div class="questions">
+            <a href="/q1">Q1</a>
+            <a href="/q2">Q2</a>
+            <a href="/q3">Q3</a>
+        </div>    
+    </nav>
+
+
+
+    <header>
+        <h1>Paris</h1>
+        <h2>Anomalies signalées en 2020 et 2021</h2>
+        <div>
+            <a href="/q1">Q1 : <br>Quelles sont les ANNÉES qui comptent le plus / le moins d’anomalies signalées, <br>par ARRONDISSEMENT ?</a>
+            <a href="/q2">Q2 : <br>Quels sont les MOIS qui comptent le plus / le moins d’anomalie signalées, <br>par TYPE D'ANOMALIE ?</a>
+            <a href="/q3">Q3 : <br>Quels sont les ARRONDISSEMENTS qui comptent le plus / le moins d’anomalies signalées, <br>par TYPE D'ANOMALIE ?</a>
+        </div>
+    </header>
+
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    {% block accueil_intro %}
+    <section class="main">
+        <div class="top"><img src="../static/img/img1.png" alt=""></div> {% comment %} image logo intro texte {% endcomment %} 
+
+        <div class="bot">
+            <ul>
+                <li>Représentation graphiques : diagrammes circulaires et histogrammes.</li>
+                <li>Cartographie des données par choix (forme, couleur, échelle)</li>
+                <li>récupération des coordonnées via Google map et clef d’autorisation.</li>
+            </ul>
+        </div>
+    </section>
+    {% endblock %}
+
+
+
+
+
+    
+
+    <div id="wrap">
+        <ul class="navbar">
+            <li>
+                <a href="#">Choix arrondissement</a>
+                <ul>
+
+                    <li><a href="../static/img/Q1_2camembert.png" onclick="affiche(this.href);return false;">Q 1 2020 et 2021 </a></li>
+
+                    <li><a href="../static/img/Q3_2camembert.png" onclick="affiche(this.href);return false;">Q 3 min et max sur 2 ans</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="camemb">
+            <img id="refImg" alt="Image" src="../static/img/bg_paris2.jpg" />
+            {# ../static/img/bg_paris2.jpg #}
+        </div> 
+
+    </div>
+
+    <script type="text/javascript">
+
+        function affiche(lienImg){
+            document.getElementById('refImg').src = lienImg;
+        }
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+ 

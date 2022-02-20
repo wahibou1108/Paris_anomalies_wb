@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+/* font-family: 'Gloria Hallelujah', cursive; */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+body {
+    /* background: url(../img/img_paris_bleu.jpg) center/cover; */
+    height: 200vh;
+            /* 100 virtual height donc 100% de l'ecran  */
+
+}
+
+/* ************ HAUT HEADER *************** */
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: #D8D2CB;
+    /* justify-content: center; */
+    align-items: center;
+    border-bottom: 5px solid #398AB9
+}
+nav a img {
+    height: 30px;
+    display: flex;
+}
+nav a{
+    /* text-transform: uppercase; */
+    color: #1C658C;
+    /* text-shadow: rgba(63, 32, 32, 0.493); */
+    font-size: 1rem;
+    text-decoration: none;
+    /* margin-right: 3px; */
+}
+nav .questions a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #1C658C;
+    margin-right: 2px;
+    padding-bottom: 0px;
+}
+/* ************ HAUT IMAGE *************** */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #EEEEEE;
+    padding: 10px;
+    background: url(../img/img_paris_bleu.jpg) center/cover;
+    /* height: 100%; */
+    box-shadow: 0px 5px 50px rgba(125, 177, 255, 0.671);
+}
+header div{
+    flex-wrap: wrap;
+    display: grid;
+    width:90%;
+    grid-template-columns: 33% 33% 33%;
+    align-items: start;
+    justify-content: space-between;
+}
+header div a{
+    border-top: 1px solid #EEEEEE;
+    margin: 30px 20px;
+    padding: 5px;
+    color:#EEEEEE;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* ********** IMAGE INTRODUCTION ******** */
+.main {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .top img {
+    width: 20vw;
+}
+.main .bot {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* ********** RESPONSIVE ********** */
+@media screen and (max-width: 700px){
+    nav .questions{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    header div a{
+        margin: 5px;
+    }
+    header div{
+        flex-wrap: nowrap;
+        /* display: flex; */
+        display: contents;
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ************ Menu déroulant *************** */
+
+/* #wrap {
+    width: 50%;
+    height: 50%;
+    z-index: 99; */
+    
+    /* pour s'assurer que le menu de navigation soit placé au sommet d'autres éléments */
+
+    /* position: relative;
+    background-color: #1C658C;
+} */
+
+.navbar{
+    height: 15%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+.navbar li {
+    height: auto;
+    width: 180px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    font-size: 0.9em ;
+    background: #398AB9;
+    border-bottom: 1px solid #EEEEEE;
+
+}
+.navbar a {
+    padding: 5px 0;
+    text-decoration: none;
+    color: #EEEEEE;
+    display: block;
+}
+/* Stylisez l'arrière-plan du menu pour qu'il change la couleur lorsqu'il est en survol. */
+.navbar li:hover, a:hover {
+    background: #398ab975;
+    border-bottom: 1px solid #EEEEEE;
+    color: #EEEEEE;
+
+}
+/* Ajoutez un style pour masquer le menu déroulant, et un autre style pour l'afficher lorsqu'un pointeur de sourit est placé sur l'élément principal du menu. */
+.navbar li ul {
+    display: none;
+    height: auto;
+}
+.navbar li:hover ul {
+    display: block;
+}
+/* Stylisez le menu déroulant. */
+.navbar li ul li {
+    background: #398AB9;
+}
+/* Changez les bordures, pour créer un effet du menu principal. */
+.navbar li ul li a {
+    border-bottom: 1px solid #D8D2CB;
+}
+.navbar li ul li a:hover {
+    background-color: #D8D2CB;
+    color: #398AB9;
+}
+
+/* ********** IMAGE GRAPHIQUES ******** */
+
+.camemb {
+    display:flex;
+    justify-content: center;
+    box-shadow: 0px 5px 50px rgba(125, 177, 255, 0.671);
+    /* background-color: #1C658C; */
+}
+
+.camemb img {
+    margin-top: 130px;
+    width: 80vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
